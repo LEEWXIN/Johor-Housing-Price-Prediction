@@ -1,0 +1,31 @@
+state,district,date,poverty_absolute,poverty_relative
+Johor,Batu Pahat,2019-01-01,2.9,9.0
+Johor,Batu Pahat,2022-01-01,5.1,19.4
+Johor,Batu Pahat,2024-01-01,2.4,11.6
+Johor,Johor Bahru,2019-01-01,3.3,12.8
+Johor,Johor Bahru,2022-01-01,3.7,10.4
+Johor,Johor Bahru,2024-01-01,1.9,9.9
+Johor,Kluang,2019-01-01,5.0,24.9
+Johor,Kluang,2022-01-01,7.2,27.4
+Johor,Kluang,2024-01-01,5.7,24.8
+Johor,Kota Tinggi,2019-01-01,6.0,20.8
+Johor,Kota Tinggi,2022-01-01,5.0,17.0
+Johor,Kota Tinggi,2024-01-01,4.2,22.7
+Johor,Kulai,2019-01-01,3.2,10.1
+Johor,Kulai,2022-01-01,0.4,7.4
+Johor,Kulai,2024-01-01,0.1,6.3
+Johor,Mersing,2019-01-01,12.1,41.2
+Johor,Mersing,2022-01-01,12.7,33.1
+Johor,Mersing,2024-01-01,6.7,25.0
+Johor,Muar,2019-01-01,4.1,14.8
+Johor,Muar,2022-01-01,6.1,23.5
+Johor,Muar,2024-01-01,2.1,16.1
+Johor,Pontian,2019-01-01,5.8,23.0
+Johor,Pontian,2022-01-01,5.1,21.1
+Johor,Pontian,2024-01-01,2.0,25.7
+Johor,Segamat,2019-01-01,2.9,20.5
+Johor,Segamat,2022-01-01,7.4,23.3
+Johor,Segamat,2024-01-01,3.1,16.8
+Johor,Tangkak,2019-01-01,3.7,16.7
+Johor,Tangkak,2022-01-01,6.9,28.2
+Johor,Tangkak,2024-01-01,4.0,19.2

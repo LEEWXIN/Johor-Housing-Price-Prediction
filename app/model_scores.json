@@ -1,0 +1,17 @@
+{
+  "Linear Regression": {
+    "R2": 0.656,
+    "RMSE": 305589,
+    "MAE": 182367
+  },
+  "Decision Tree": {
+    "R2": 0.511,
+    "RMSE": 364235,
+    "MAE": 185119
+  },
+  "Random Forest": {
+    "R2": 0.671,
+    "RMSE": 298614,
+    "MAE": 166556
+  }
+}

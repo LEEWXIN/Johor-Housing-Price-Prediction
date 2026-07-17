@@ -1,0 +1,31 @@
+state,district,date,income_mean,income_median
+Johor,Batu Pahat,2019-01-01,7392,6504
+Johor,Batu Pahat,2022-01-01,7419,6347
+Johor,Batu Pahat,2024-01-01,9006,7555
+Johor,Johor Bahru,2019-01-01,9315,7342
+Johor,Johor Bahru,2022-01-01,9869,8232
+Johor,Johor Bahru,2024-01-01,10975,8977
+Johor,Kluang,2019-01-01,5953,4933
+Johor,Kluang,2022-01-01,6461,5204
+Johor,Kluang,2024-01-01,6616,6158
+Johor,Kota Tinggi,2019-01-01,6982,5475
+Johor,Kota Tinggi,2022-01-01,7529,6227
+Johor,Kota Tinggi,2024-01-01,8106,6284
+Johor,Kulai,2019-01-01,8602,7536
+Johor,Kulai,2022-01-01,9177,7460
+Johor,Kulai,2024-01-01,10296,8406
+Johor,Mersing,2019-01-01,4937,3896
+Johor,Mersing,2022-01-01,5426,4445
+Johor,Mersing,2024-01-01,6014,5335
+Johor,Muar,2019-01-01,7540,5963
+Johor,Muar,2022-01-01,7572,5724
+Johor,Muar,2024-01-01,8401,7334
+Johor,Pontian,2019-01-01,6776,5585
+Johor,Pontian,2022-01-01,6913,5616
+Johor,Pontian,2024-01-01,7011,5685
+Johor,Segamat,2019-01-01,6431,5595
+Johor,Segamat,2022-01-01,6578,5318
+Johor,Segamat,2024-01-01,7348,6451
+Johor,Tangkak,2019-01-01,6659,5561
+Johor,Tangkak,2022-01-01,7093,5622
+Johor,Tangkak,2024-01-01,7524,6374
