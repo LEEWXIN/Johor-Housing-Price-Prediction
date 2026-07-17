@@ -19,12 +19,23 @@ import pandas as pd
 import numpy as np
 import joblib
 import json
+import os
 import sqlite3
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules
+
+# ---- resolve data/model files relative to this script, not the process's
+#      current working directory. Streamlit Cloud runs the app with the repo
+#      root as the working directory (not the app/ folder), so a bare
+#      "house_model.pkl" resolves locally but 404s on Streamlit Cloud with
+#      FileNotFoundError. Building an absolute path from __file__ makes this
+#      work identically locally and when deployed. ----
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def _p(filename):
+    return os.path.join(BASE_DIR, filename)
 
 # ---- palette (dark / techy) ----
 BG, CARD, TEXT, MUTED = "#0D1117", "#161B22", "#E6EDF3", "#8B949E"
@@ -48,24 +59,24 @@ AREA_CENTROIDS = {
 # ------------------------------------------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("house_model.pkl")
+    return joblib.load(_p("house_model.pkl"))
 
 @st.cache_data
 def load_meta():
-    meta = json.load(open("app_meta.json", encoding="utf-8"))
-    ref = pd.read_csv("area_reference.csv").set_index("Area_clean")
+    meta = json.load(open(_p("app_meta.json"), encoding="utf-8"))
+    ref = pd.read_csv(_p("area_reference.csv")).set_index("Area_clean")
     return meta, ref
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("johor_final_clean.csv")
+    df = pd.read_csv(_p("johor_final_clean.csv"))
     q1, q2 = df["Price_RM"].quantile([1/3, 2/3])
     return df, float(q1), float(q2)
 
 @st.cache_data
 def load_scores():
     try:
-        return json.load(open("model_scores.json", encoding="utf-8"))
+        return json.load(open(_p("model_scores.json"), encoding="utf-8"))
     except Exception:
         return {}
 
@@ -95,7 +106,7 @@ def mine_rules(min_support=0.03, min_conf=0.5):
 
 def log_decision(area, ptype, size, beds, baths, asking, point, low, high, verdict):
     try:
-        con = sqlite3.connect("johor_property.db")
+        con = sqlite3.connect(_p("johor_property.db"))
         con.execute("""INSERT INTO decision_log
             (query_time,in_area,in_type,in_size,in_beds,in_baths,
              asking_price,predicted_price,range_low,range_high,verdict)
